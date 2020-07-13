@@ -1,5 +1,5 @@
 # large-number v1.0
-Numerical avascript library representing [scientific notation](https://en.wikipedia.org/wiki/Scientific_notation)-based large numbers, capping out at `10^2^1024 = 1e1.8e308`, and also small numbers down to `10^(-2^1024) = 1e(-1e308)`.  The `LargeNumber` class provides methods for the four arithmetic operators and conversion to JS `Number`s. Note that LargeNumber is *not* an arbitrary-precision like many `BigInt` or `Decimal` libraries, and has the same precision as `Number` up until `1e9e15`.
+Numerical Javascript library representing [scientific notation](https://en.wikipedia.org/wiki/Scientific_notation)-based large numbers, capping out at `10^2^1024 = 1e1.8e308`, and also small numbers down to `10^(-2^1024) = 1e(-1e308)`.  The `LargeNumber` class provides methods for the four arithmetic operators and conversion to JS `Number`s. Note that LargeNumber is *not* an arbitrary-precision like many `BigInt` or `Decimal` libraries, and has the same precision as `Number` up until `1e9e15`.
 
 ## Installation and usage
 You can install the library via just downloading the raw text (since it is zero-dependency). You can also clone it from git:
