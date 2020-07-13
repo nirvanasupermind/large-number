@@ -7,7 +7,7 @@ You can install the library via just downloading the raw text (since it is zero-
     git clone https://github.com/nirvanasupermind/large-number.git
 
 To import it to an HTML file use:
-`<script src="(path)/large-number/scripts/largenumber.js"></script>`
+    <script src="(path)/large-number/scripts/largenumber.js"></script>
 
 
 
