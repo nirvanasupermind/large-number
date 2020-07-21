@@ -64,11 +64,9 @@ LargeNumber.MAX_FLOAT = LargeNumber.fromNum(Number.MAX_VALUE)
 LargeNumber.GOOGOLPLEX = new LargeNumber(1, 1e+100);
 
 LargeNumber.prototype.toString = function () {
-  if (isFinite(this.toNum())) {
-    return this.toNum().toString();
-  } else {
-    return this.a + "e+" + this.b;
-  }
+  
+    return this.a + "e" + this.b;
+  
 }
 
 
@@ -126,3 +124,15 @@ LargeNumber.prototype.divide = function (x) {
 //   return xl.pow(erf(2 * z - 1).add(1).divide(2));
 // }
 
+//Export to requirejs
+try {
+   define([],function() {
+       var window_keys = Object.keys(window);
+       var window_vals = Object.values(window);
+       var obj = {};
+       for(var i = 0; i < window_keys.length; i++) {
+          obj[window_keys[i]] = window_vals[i];
+       }
+       return obj;
+   });
+} catch(e) {}
