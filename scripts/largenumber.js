@@ -1,3 +1,4 @@
+"use strict";
 //LargeNumberJS library by nirvanasupermind
 //Licensed under MIT License
 
@@ -100,6 +101,13 @@ LargeNumber.prototype.divide = function (x) {
 
 }
 
+LargeNumber.fac = function(x) {
+  var result = new LargeNumber(1,0);
+  for(var i = 1; i <= x; i++) {
+    result = result.multiply(new LargeNumber(i,0));
+  }
+  return result;
+}
 // LargeNumber.prototype.pow = function (x) {
 //   //(10^100)^2 = 
 
@@ -124,9 +132,6 @@ LargeNumber.prototype.divide = function (x) {
 //   return xl.pow(erf(2 * z - 1).add(1).divide(2));
 // }
 
-//Export  if possible
-try {
-  export { LargeNumber }
-} catch (e) {
-
-};
+LargeNumber.prototype.pow = function(x) {
+  return new LargeNumber(Math.pow(this.a,x),this.b*x);
+}
