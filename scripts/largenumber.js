@@ -12,8 +12,8 @@ function fromPolynomial(arr, x) {
 
 
 Number.prototype.fac = function () {
-  var result = Math.sqrt(Math.PI) * (this / Math.E) ** this
-  result *= (8 * this ** 3 + 4 * this ** 2 + this + 1 / 30) ** (1 / 6)
+  var result = Math.sqrt(Math.PI) * Math.pow(this / Math.E, this);
+  result *= Math.pow(8 * Math.pow(this, 3) + 4 * Math.pow(this, 2) + this + 1 / 30, 1 / 6)
   if (this % 1 == 0) {
     result = Math.round(result)
   }
@@ -101,10 +101,10 @@ LargeNumber.prototype.divide = function (x) {
 
 }
 
-LargeNumber.fac = function(x) {
-  var result = new LargeNumber(1,0);
-  for(var i = 1; i <= x; i++) {
-    result = result.multiply(new LargeNumber(i,0));
+LargeNumber.fac = function (x) {
+  var result = new LargeNumber(1, 0);
+  for (var i = 1; i <= x; i++) {
+    result = result.multiply(new LargeNumber(i, 0));
   }
   return result;
 }
@@ -132,6 +132,6 @@ LargeNumber.fac = function(x) {
 //   return xl.pow(erf(2 * z - 1).add(1).divide(2));
 // }
 
-LargeNumber.prototype.pow = function(x) {
-  return new LargeNumber(Math.pow(this.a,x),this.b*x);
+LargeNumber.prototype.pow = function (x) {
+  return new LargeNumber(Math.pow(this.a, x), this.b * x);
 }
