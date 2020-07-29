@@ -61,7 +61,6 @@ LargeNumber.GOBY = LargeNumber.fromNum(1e+35);
 LargeNumber.GOGOL = LargeNumber.fromNum(1e+50);
 LargeNumber.OGOL = LargeNumber.fromNum(1e+80);
 LargeNumber.GOOGOL = LargeNumber.fromNum(1e+100);
-LargeNumber.MAX_SAFE_INTEGER = new LargeNumber(10 - Number.EPSILON * 5, )
 LargeNumber.GOOGOLPLEX = new LargeNumber(1, 1e+100);
 
 LargeNumber.prototype.toString = function () {
