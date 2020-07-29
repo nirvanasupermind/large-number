@@ -1,5 +1,6 @@
 # large-number v1.0
-Numerical Javascript library representing numbers as large as `1e1.8e308` and down to `1e-1.8e308` in the scientific notation.  The `LargeNumber` class provides methods for many operators, and conversion to JS `Number`s. Note that LargeNumber isn't necessarily arbitrary-precision.
+Numerical Javascript library (ES5 compatible) representing numbers as large as `1e1.8e308` and down to `1e-1.8e308` in the scientific notation.  The `LargeNumber` class provides methods for many operators, and conversion to JS `Number`s. Note that LargeNumber isn't necessarily arbitrary-precision.
+
 ## Installation and usage
 You can install the library via just downloading the raw text (since it is zero-dependency). You can also clone it from git:
 
